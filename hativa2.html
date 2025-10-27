@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hativa Consultoria - Contratos Homologados</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* --- CABEÇALHO --- */
+    header {
+      background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px 70px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.6em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    header h2 {
+      font-size: 1.3em;
+      color: #d8d8d8;
+      margin-top: 10px;
+      font-weight: 400;
+      font-style: italic;
+      position: relative;
+      display: inline-block;
+    }
+
+    header h2::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 3px;
+      background: linear-gradient(90deg, #d4af37 0%, #f5e89e 100%);
+      margin: 10px auto 0;
+      border-radius: 3px;
+    }
+
+    /* --- CONTEÚDO --- */
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      border-left: 5px solid #000;
+      padding-left: 10px;
+    }
+
+    .contract {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      transition: box-shadow 0.3s;
+    }
+
+    .contract:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contract h3 {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .contract p {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* --- GRÁFICO --- */
+    .chart-container {
+      margin: 60px auto;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .chart-container h3 {
+      margin-bottom: 20px;
+      font-size: 1.3em;
+      color: #111;
+    }
+
+    /* --- DOWNLOAD --- */
+    .download {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .download button {
+      background-color: #000;
+      color: #fff;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .download button:hover {
+      background-color: #333;
+      transform: scale(1.03);
+    }
+
+    .password-box {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .password-box input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .password-box button {
+      margin-left: 10px;
+      padding: 10px 16px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .password-box button:hover {
+      background-color: #333;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    /* --- RODAPÉ --- */
+    footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    footer a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.9em;
+      }
+      header h2 {
+        font-size: 1.05em;
+      }
+      h2 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hativa Consultoria</h1>
+    <h2>Consultoria e Assessoria Especializada</h2>
+  </header>
+
+  <section>
+    <h2>Contratos Homologados</h2>
+
+    <div class="contract"><h3>Registro de preços para a eventual aquisição de gêneros alimentícios</h3><p>R$ 1.053.607,39</p></div>
+    <div class="contract"><h3>Aquisição de Coffee Break e Café da Manhã para a Secretaria Municipal</h3><p>R$ 101.020,00</p></div>
+    <div class="contract"><h3>Registro de preços para fornecimento de materiais de construção</h3><p>R$ 43.269,00</p></div>
+    <div class="contract"><h3>Registro de preços para aquisição de equipamentos eletrônicos e materiais permanentes</h3><p>R$ 54.008,00</p></div>
+    <div class="contract"><h3>Registro de preços para aquisição de produtos de panificação e kit lanche</h3><p>R$ 116.394,10</p></div>
+    <div class="contract"><h3>Fornecimento de produtos de panificação para a Câmara Municipal de Ouro Branco</h3><p>R$ 196.608,00</p></div>
+    <div class="contract"><h3>Registro de preço para aquisição de cesta básica – pequeno porte</h3><p>R$ 311.920,00</p></div>
+    <div class="contract"><h3>Materiais de acondicionamento, copa e cozinha para secretarias municipais</h3><p>R$ 196.001,26</p></div>
+  </section>
+
+  <section class="chart-container">
+    <h3>Mais de R$ 7.000.000,00 em contratos administrados</h3>
+    <canvas id="contractsChart"></canvas>
+  </section>
+
+  <div class="download">
+    <button onclick="showPasswordBox()">📄 Baixar Portfólio Completo (PDF)</button>
+
+    <div id="password-box" class="password-box">
+      <input type="password" id="password" placeholder="Digite a senha">
+      <button onclick="checkPassword()">Acessar</button>
+      <p id="error" class="error"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>Contato:</strong><br>
+    📞 (31) 99376-9930<br>
+    ✉️ <a href="mailto:hativaconsultoria@gmail.com">hativaconsultoria@gmail.com</a><br>
+    📸 <a href="https://www.instagram.com/hativaconsultoria" target="_blank">@hativaconsultoria</a><br><br>
+    <strong>CNPJ:</strong> 61.734.911/0001-37</p>
+  </footer>
+
+  <script>
+    // Gráfico com coluna "Outros"
+    const ctx = document.getElementById('contractsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          "Gêneros alimentícios",
+          "Coffee Break e Café da Manhã",
+          "Materiais de construção",
+          "Equipamentos eletrônicos",
+          "Panificação e kit lanche",
+          "Panificação Câmara Ouro Branco",
+          "Cesta básica",
+          "Materiais de copa e cozinha",
+          "Outros"
+        ],
+        datasets: [{
+          label: 'Valor (R$)',
+          data: [1053607.39, 101020, 43269, 54008, 116394.10, 196608, 311920, 196001.26, 4927172.25],
+          backgroundColor: [
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(0, 0, 0, 0.85)',
+            'rgba(150, 150, 150, 0.9)' // cor diferente para "Outros"
+          ],
+          borderRadius: 6,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `R$ ${ctx.parsed.y.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: value => `R$ ${value.toLocaleString('pt-BR')}`
+            }
+          }
+        }
+      }
+    });
+
+    // Sistema de senha para download
+    function showPasswordBox() {
+      document.getElementById("password-box").style.display = "block";
+      document.getElementById("error").textContent = "";
+    }
+
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      if (password === "1256") {
+        window.location.href = "Portfólio de Contratos – Licitações.pdf";
+      } else {
+        error.textContent = "❌ Senha incorreta. Tente novamente.";
+      }
+    }
+  </script>
+</body>
+</html>
