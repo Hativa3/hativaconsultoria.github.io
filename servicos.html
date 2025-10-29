@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços - Hativa Consultoria</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Hativa Consultoria</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html" class="active">Serviços</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html">Contato</a>
+      <a href="#" class="user">Usuário</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contratos Homologados</h1>
+    <div class="contracts">
+      <div class="contract">Registro de preços para aquisição de gêneros alimentícios — R$ 1.053.607,39</div>
+      <div class="contract">Coffee Break e Café da Manhã — R$ 101.020,00</div>
+      <div class="contract">Materiais de construção — R$ 43.269,00</div>
+      <div class="contract">Equipamentos eletrônicos — R$ 54.008,00</div>
+      <div class="contract">Panificação e kit lanche — R$ 116.394,10</div>
+      <div class="contract">Produtos de Panificação — R$ 196.608,00</div>
+      <div class="contract">Cesta básica — R$ 311.920,00</div>
+      <div class="contract">Materiais de copa e cozinha — R$ 196.001,26</div>
+    </div>
+
+    <div class="chart-container">
+      <h2>Mais de R$ 7.000.000,00 em contratos administrados</h2>
+      <canvas id="contractsChart"></canvas>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Hativa Consultoria | Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const ctx = document.getElementById('contractsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          "Gêneros alimentícios",
+          "Coffee Break",
+          "Construção",
+          "Eletrônicos",
+          "Panificação",
+          "Produtos de Panificação",
+          "Cesta básica",
+          "Copa e cozinha",
+          "Outros"
+        ],
+        datasets: [{
+          data: [1053607, 101020, 43269, 54008, 116394, 196608, 311920, 196001, 4927127.25],
+          backgroundColor: [
+            'rgba(0,0,0,0.85)','rgba(0,0,0,0.85)','rgba(0,0,0,0.85)','rgba(0,0,0,0.85)',
+            'rgba(0,0,0,0.85)','rgba(0,0,0,0.85)','rgba(0,0,0,0.85)','rgba(0,0,0,0.85)',
+            'rgba(150,150,150,0.9)'
+          ],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, ticks: { callback: v => `R$ ${v.toLocaleString('pt-BR')}` } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

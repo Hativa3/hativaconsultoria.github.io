@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Hativa Consultoria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Hativa Consultoria</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="portfolio.html" class="active">Portfólio</a>
+      <a href="contato.html">Contato</a>
+      <a href="#" class="user">Usuário</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Portfólio de Contratos</h1>
+    <p>Principais contratos e projetos executados pela Hativa Consultoria, evidenciando nossa experiência em assessoria e gestão para empresas e órgãos públicos.</p>
+    <div class="download">
+      <button onclick="mostrarSenha()">📄 Baixar Portfólio Completo (PDF)</button>
+      <div id="senhaBox" class="senhaBox" style="display:none;">
+        <input type="password" id="senha" placeholder="Digite a senha">
+        <button onclick="verificarSenha()">Acessar</button>
+        <p id="erro" class="erro"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Hativa Consultoria</p>
+  </footer>
+
+  <script>
+    function mostrarSenha() {
+      document.getElementById("senhaBox").style.display = "block";
+      document.getElementById("erro").textContent = "";
+    }
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      const erro = document.getElementById("erro");
+      if (senha === "1256") {
+        window.open("Portfólio de Contratos – Licitações.pdf", "_blank");
+      } else {
+        erro.textContent = "❌ Senha incorreta. Tente novamente.";
+      }
+    }
+  </script>
+</body>
+</html>
